@@ -13,16 +13,11 @@
         </div>
       </div>
     </router-link>
-    <div>
-      <button type="button" class="btn btn-danger" @click="deleteHouse(house.id)">
-        Delete Listing
-      </button>
-    </div>
   </div>
 </template>
 
 <script>
-import { housesService } from '../services/HousesService'
+
 export default {
   name: 'House',
   props: {
@@ -33,13 +28,7 @@ export default {
   },
   setup() {
     return {
-      async deleteHouse(id) {
-        try {
-          await housesService.deleteHouse(id)
-        } catch (error) {
-          console.error(error)
-        }
-      }
+
     }
   },
   components: {}
